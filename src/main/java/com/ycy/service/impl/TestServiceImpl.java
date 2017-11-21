@@ -27,7 +27,10 @@ public class TestServiceImpl implements com.ycy.service.TestService {
       }
     } catch (Exception ex) {
       System.out.println(num + "service异常日志处理");
+      throw new RuntimeException(ex);
     }
+    
     System.out.println(num + "service正常执行");
+    
   }
 }
